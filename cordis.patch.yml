@@ -1,0 +1,6 @@
+# dsh-attention bundle patch: mounts the plugin into a profile layer stack.
+# The entry module (dsh-attention) is a no-op server bundle; all real work
+# happens in the browser client module (lib/client.js).
+- insert:
+    - id: attention
+      name: 'dsh-attention'

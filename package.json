@@ -1,0 +1,55 @@
+{
+  "name": "dsh-attention",
+  "version": "0.2.0",
+  "description": "Attention reminder for DeepSeek Harness: fires a system notification when the harness is waiting for your approval (permission), your answer (ask_user_question), or a background task completes — and jumps to the session on click.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laksdjfi/dsh-attention.git"
+  },
+  "homepage": "https://github.com/laksdjfi/dsh-attention",
+  "bugs": {
+    "url": "https://github.com/laksdjfi/dsh-attention/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "notification",
+    "approval",
+    "ask-user",
+    "attention"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  }
+}
