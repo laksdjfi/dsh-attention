@@ -58,10 +58,6 @@ dsh-attention/
 └── README.md
 ```
 
-## 上传到 GitHub
-
-仓库名建议用 `dsh-attention`。手动上传时把本目录内容（`package.json`、`cordis.patch.yml`、`install.ps1`、`lib/`、`LICENSE`、`CHANGELOG.md`、`README.md`、`.gitignore`）拖入仓库即可；`开发日志.md` 是内部记录，可传可不传。上传前把 `package.json` 的 `repository`/`homepage` 字段补成你的仓库地址。
-
 ## 说明与限制
 
 - 依赖浏览器 `Notification` API（localhost 下可用）；权限被拒时仅提示，不崩溃
