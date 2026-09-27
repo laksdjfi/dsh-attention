@@ -1,6 +1,6 @@
 {
   "name": "dsh-attention",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Attention reminder for DeepSeek Harness: fires a system notification when the harness is waiting for your approval (permission), your answer (ask_user_question), or a background task completes — and jumps to the session on click.",
   "license": "MIT",
   "repository": {
@@ -44,9 +44,10 @@
     "client": {
       "inject": [
         "@deepseek-ai/dsh-api-remotes",
-        "@deepseek-ai/dsh-client-runtime",
         "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-session",
         "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-workspace",
         "@deepseek-ai/dsh-client-locale"
       ],
       "platform": "web"
